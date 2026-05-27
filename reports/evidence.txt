@@ -1,0 +1,158 @@
+============================================================
+Aegis-API Evidence File — 2026-05-27 17:48:42
+============================================================
+
+Type:     GraphQL Introspection Enabled
+Protocol: GraphQL
+OWASP:    API7:2023 - Security Misconfiguration
+URL:      N/A
+Status:   N/A
+Evidence:
+{
+  "types_discovered": 17,
+  "query_type": "Query",
+  "mutation_type": "Mutations",
+  "sensitive_fields_found": [
+    "UserObject.password",
+    "UserInput.password",
+    "Login.accessToken",
+    "Login.refreshToken"
+  ]
+}
+------------------------------------------------------------
+
+Type:     Sensitive Fields Exposed in GraphQL Schema
+Protocol: GraphQL
+OWASP:    API3:2023 - Broken Object Property Level Authorization
+URL:      N/A
+Status:   N/A
+Evidence:
+{
+  "target": "http://localhost:5013/graphql",
+  "sensitive_fields": [
+    "UserObject.password",
+    "UserInput.password",
+    "Login.accessToken",
+    "Login.refreshToken"
+  ]
+}
+------------------------------------------------------------
+
+Type:     GraphQL Query Depth Limit Not Enforced
+Protocol: GraphQL
+OWASP:    API4 — Unrestricted Resource Consumption
+URL:      N/A
+Status:   N/A
+Evidence:
+{
+  "depths_tested": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    20
+  ],
+  "timing_results": [
+    {
+      "depth": 3,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 74.63,
+      "actual_data_depth": 5,
+      "confidence": "HIGH",
+      "note": "Server processed depth 3 in 75ms (data depth: 5). Confidence: HIGH."
+    },
+    {
+      "depth": 5,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 103.65,
+      "actual_data_depth": 7,
+      "confidence": "HIGH",
+      "note": "Server processed depth 5 in 104ms (data depth: 7). Confidence: HIGH."
+    },
+    {
+      "depth": 7,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 123.95,
+      "actual_data_depth": 9,
+      "confidence": "HIGH",
+      "note": "Server processed depth 7 in 124ms (data depth: 9). Confidence: HIGH."
+    },
+    {
+      "depth": 10,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 275.18,
+      "actual_data_depth": 12,
+      "confidence": "HIGH",
+      "note": "Server processed depth 10 in 275ms (data depth: 12). Confidence: HIGH."
+    },
+    {
+      "depth": 15,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 1059.43,
+      "actual_data_depth": 17,
+      "confidence": "HIGH",
+      "note": "Server processed depth 15 in 1059ms (data depth: 17). Confidence: HIGH."
+    },
+    {
+      "depth": 20,
+      "status": "ok",
+      "server_rejected": false,
+      "elapsed_ms": 5801.12,
+      "actual_data_depth": 22,
+      "confidence": "HIGH",
+      "note": "Server processed depth 20 in 5801ms (data depth: 22). Confidence: HIGH."
+    }
+  ],
+  "max_depth_responded": 20
+}
+------------------------------------------------------------
+
+Type:     GraphQL Depth Query — Exponential Response Time Growth
+Protocol: GraphQL
+OWASP:    API4 — Unrestricted Resource Consumption
+URL:      N/A
+Status:   N/A
+Evidence:
+{
+  "type": "exponential_slowdown",
+  "baseline_depth": 3,
+  "baseline_ms": 74.63,
+  "peak_depth": 20,
+  "peak_ms": 5801.12,
+  "slowdown_ratio": 77.73,
+  "note": "Response time grew 77.7x from depth 3 (75ms) to depth 20 (5801ms)"
+}
+------------------------------------------------------------
+
+Type:     Unknown Finding
+Protocol: GraphQL
+OWASP:    N/A
+URL:      N/A
+Status:   N/A
+Evidence:
+{}
+------------------------------------------------------------
+
+Type:     GraphQL Array Batching Enabled — Unrestricted Operation Processing
+Protocol: GraphQL
+OWASP:    API4:2023 - Unrestricted Resource Consumption
+URL:      N/A
+Status:   N/A
+Evidence:
+{
+  "target_url": "http://localhost:5013/graphql",
+  "operations_sent": 10,
+  "operations_processed": 10,
+  "http_status": 200,
+  "sample_payload": "[\n  {\n    \"query\": \"{ __typename }\"\n  },\n  {\n    \"query\": \"{ __typename }\"\n  }\n]",
+  "no_individual_rate_limit": true,
+  "individual_requests_sent": 10
+}
+------------------------------------------------------------
+

