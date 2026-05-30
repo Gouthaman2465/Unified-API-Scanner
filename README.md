@@ -110,7 +110,7 @@ You should see the Aegis-API CLI help output listing all available flags.
 ### Auto-detect protocol (recommended)
 
 ```bash
-python main.py --url http://target/api --protocol auto
+python main.py -t http://target/api --protocol auto
 ```
 
 Aegis-API will probe the target and automatically detect whether it is a REST, SOAP, or GraphQL API, then route to the correct scanner chain.
@@ -118,38 +118,38 @@ Aegis-API will probe the target and automatically detect whether it is a REST, S
 ### REST API scan
 
 ```bash
-python main.py --url http://localhost:8888/api --protocol rest --token YOUR_JWT_TOKEN
+python main.py -t http://localhost:8888/api --protocol rest --token YOUR_JWT_TOKEN
 ```
 
 ### SOAP API scan
 
 ```bash
-python main.py --url http://localhost:8080/ws --protocol soap
+python main.py -t http://localhost:8080/ws --protocol soap
 ```
 
 ### GraphQL API scan
 
 ```bash
-python main.py --url http://localhost:5013/graphql --protocol graphql
+python main.py -t http://localhost:5013/graphql --protocol graphql
 ```
 
 ### With Burp Suite proxy
 
 ```bash
-python main.py --url http://target/api --protocol rest --proxy http://127.0.0.1:8080
+python main.py -t http://target/api --protocol rest --proxy http://127.0.0.1:8080
 ```
 
 ### With custom wordlist (for IDOR fuzzing)
 
 ```bash
-python main.py --url http://target/api --protocol rest -p wordlists/ids.txt
+python main.py -t http://target/api --protocol rest -p wordlists/ids.txt
 ```
 
 ### Full flag reference
 
 | Flag           | Description                                      | Default          |
 |----------------|--------------------------------------------------|------------------|
-| `--url`        | Target API base URL (required)                   | —                |
+| `-t`           | Target API base URL (required)                   | —                |
 | `--protocol`   | Protocol: rest / soap / graphql / auto           | auto             |
 | `--token`      | JWT Bearer token for authenticated scans         | —                |
 | `--proxy`      | Proxy URL (e.g. Burp Suite: http://127.0.0.1:8080) | —             |
@@ -159,22 +159,12 @@ python main.py --url http://target/api --protocol rest -p wordlists/ids.txt
 | `--timeout`    | Request timeout in seconds                       | 10               |
 | `--retries`    | Max retries per request                          | 3                |
 | `--concurrency`| Number of concurrent async workers               | 10               |
+| `--no-proxy`   | run the code without burp suite on               | -               |
+
 
 ---
 
-## Sample Output
 
-Pre-generated sample outputs from all three lab environments are in the [`sample_outputs/`](./sample_outputs/) folder:
-
-| File | Contents |
-|------|----------|
-| [`sample_VAPT_Report.pdf`](./sample_outputs/sample_VAPT_Report.pdf) | Full PDF report with REST + SOAP + GraphQL findings, OWASP mapping, CVSS scores, remediation |
-| [`sample_audit_log.csv`](./sample_outputs/sample_audit_log.csv) | Multi-protocol CSV scan log with timestamps |
-| [`sample_payloads.txt`](./sample_outputs/sample_payloads.txt) | Raw request/response evidence from all three protocols |
-
-See [`sample_outputs/README.md`](./sample_outputs/README.md) for a full breakdown of each file.
-
----
 
 ## Architecture
 
@@ -307,18 +297,21 @@ Default URL after startup: `http://localhost:8888`
 
 Verify: visit `http://localhost:8888` in your browser — you should see the crAPI web interface.
 
-### SOAP — WebGoat
+## SOAP — Custom Vulnerable SOAP Server
 
-OWASP WebGoat is a deliberately vulnerable application with SOAP-based lessons covering XXE, XML injection, and WS-Security weaknesses.
+A custom SOAP service created specifically for validating the SOAP scanning capabilities of Aegis-API.
+
+Supported test scenarios:
+
+- WSDL Enumeration
+- XXE Injection
+- XML Injection
+- Weak WS-Security Validation
+
+### Start the SOAP Server
 
 ```bash
-docker pull webgoat/goat-and-wolf
-docker run -p 8080:8080 -p 9090:9090 -e WEBGOAT_HOST=0.0.0.0 webgoat/goat-and-wolf
-```
-
-Default URL: `http://localhost:8080/WebGoat`
-
-WSDL endpoint for testing: `http://localhost:8080/WebGoat/services/HelloWS?wsdl`
+python fake_soap_server.py
 
 ### GraphQL — DVGA (Damn Vulnerable GraphQL Application)
 
@@ -382,7 +375,7 @@ The author and contributors accept no liability for misuse of this tool. Use res
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](./LICENSE) for full terms.
+This project is licensed under the MIT License. See [LICENSE](./LICENSE.txt) for full terms.
 
 ---
 
