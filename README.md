@@ -284,8 +284,6 @@ api2.00/
 │
 ├── main.py
 ├── fake_soap_server.py
-├── SOAP_enum_test.py
-├── wsdl_tester.py
 ├── audit_log.csv
 ├── crapi_openapi.json
 ├── crapi_openapi.yml
