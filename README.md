@@ -345,19 +345,19 @@ Verify introspection is enabled: send `{"query": "{ __schema { types { name } } 
 
 ### Which phase tests against which lab
 
-| Phase | Lab Used  | Protocol | What Is Tested                          |
-|-------|-----------|----------|-----------------------------------------|
-| 1–3   | crAPI     | REST     | IDOR, Mass Assignment, Swagger discovery|
-| 4     | WebGoat   | SOAP     | WSDL enumeration                        |
-| 5     | DVGA      | GraphQL  | Introspection schema discovery          |
-| 6     | crAPI     | REST     | JWT analysis                            |
-| 7     | WebGoat   | SOAP     | XXE injection                           |
-| 8     | WebGoat   | SOAP     | XML injection, WS-Security              |
-| 9     | DVGA      | GraphQL  | Depth limit attack                      |
-| 10    | DVGA      | GraphQL  | Field authorization bypass              |
-| 11    | DVGA      | GraphQL  | Batching / alias abuse                  |
-| 12    | crAPI     | REST     | Rate limit testing                      |
-| 13    | All three | ALL      | Unified PDF report generation           |
+| Phase | Lab Used        | Protocol | What Is Tested                          |
+|-------|-----------      |----------|-----------------------------------------|
+| 1–3   | crAPI           | REST     | IDOR, Mass Assignment, Swagger discovery|
+| 4     | Fake_soap_server| SOAP     | WSDL enumeration                        |
+| 5     | DVGA            | GraphQL  | Introspection schema discovery          |
+| 6     | crAPI           | REST     | JWT analysis                            |
+| 7     | Fake_soap_server| SOAP     | XXE injection                           |
+| 8     | Fake_soap_server| SOAP     | XML injection, WS-Security              |
+| 9     | DVGA            | GraphQL  | Depth limit attack                      |
+| 10    | DVGA            | GraphQL  | Field authorization bypass              |
+| 11    | DVGA            | GraphQL  | Batching / alias abuse                  |
+| 12    | crAPI           | REST     | Rate limit testing                      |
+| 13    | All three       | ALL      | Unified PDF report generation           |
 
 ---
 
