@@ -336,7 +336,7 @@ Purpose-built vulnerable GraphQL app. Tests introspection abuse, depth attacks, 
 
 ```bash
 docker pull dolevf/dvga
-docker run -t -p 5013:5013 -e WEB_HOST=0.0.0.0 dolevf/dvga
+docker run -d -t -p 5013:5013 -e WEB_HOST=0.0.0.0 dolevf/dvga
 ```
 
 Default URL: `http://localhost:5013/graphql`
