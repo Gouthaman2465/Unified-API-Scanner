@@ -124,7 +124,7 @@ python main.py -t http://localhost:8888/api --protocol rest --token YOUR_JWT_TOK
 ### SOAP API scan
 
 ```bash
-python main.py -t http://localhost:8080/ws --protocol soap
+python main.py -t http://localhost:8000/ws --protocol soap
 ```
 
 ### GraphQL API scan
@@ -322,11 +322,13 @@ Supported test scenarios:
 - XXE Injection
 - XML Injection
 - Weak WS-Security Validation
+- runs on port 8000
 
 ### Start the SOAP Server
-
+Verify: visit `http://localhost:8000` in your browser
 ```bash
 python fake_soap_server.py
+
 
 ### GraphQL — DVGA (Damn Vulnerable GraphQL Application)
 
