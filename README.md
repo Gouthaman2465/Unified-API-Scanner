@@ -77,7 +77,7 @@ Aegis-API is an open-source API security assessment framework that detects OWASP
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/aegis-api.git
+git clone https://github.com/gouthaman2465/Unified-API-Scanner.git
 cd aegis-api
 ```
 
