@@ -217,64 +217,81 @@ python main.py -t http://target/api --protocol rest -p wordlists/ids.txt
 
 ## Folder Structure
 
-```
-aegis_api/
+## Folder Structure
+
+```text
+api2.00/
 │
 ├── scanners/
-│   ├── rest/           ← REST-specific vulnerability scanners
+│   ├── rest/
 │   │   ├── idor.py
 │   │   ├── mass_assignment.py
 │   │   └── rate_limit.py
-│   ├── soap/           ← SOAP-specific vulnerability scanners
+│   │
+│   ├── soap/
 │   │   ├── wsdl_enum.py
 │   │   ├── xxe.py
 │   │   ├── xml_injection.py
 │   │   └── ws_security.py
-│   ├── graphql/        ← GraphQL-specific vulnerability scanners
+│   │
+│   ├── graphql/
 │   │   ├── introspection.py
 │   │   ├── depth_limit.py
 │   │   ├── field_auth.py
 │   │   └── batch_abuse.py
-│   └── jwt.py          ← Shared JWT analyzer (REST + GraphQL)
+│   │
+│   └── jwt.py
 │
-├── discovery/          ← Protocol detection and endpoint discovery
+├── discovery/
+│   ├── __init__.py
 │   ├── protocol_detector.py
+│   ├── rest_probe.py
 │   ├── swagger_parser.py
 │   ├── wsdl_parser.py
 │   └── graphql_schema.py
 │
-├── utils/              ← Shared utilities used by all protocols
+├── utils/
+│   ├── http_client.py
+│   ├── helpers.py
 │   ├── logger.py
 │   ├── reporting.py
-│   ├── helpers.py
-│   └── http_client.py
+│   └── ci_reporter.py
 │
-├── payloads/           ← Attack payload files per protocol
+├── payloads/
 │   ├── soap/
-│   │   ├── xxe_payloads.xml
-│   │   └── sqli_soap.xml
+│   │   └── xxe_payloads.xml
+│   │
 │   └── graphql/
 │       ├── depth_bomb.graphql
 │       └── batch_payloads.graphql
 │
-├── sample_outputs/     ← Pre-generated scan outputs for review
-│   ├── sample_VAPT_Report.pdf
-│   ├── sample_audit_log.csv
-│   ├── sample_payloads.txt
-│   └── README.md
+├── reports/
+│   ├── VAPT_Report.pdf
+│   ├── evidence.txt
+│   └── aegis_report_*.pdf
 │
-├── tests/              ← Unit and integration tests
+├── tests/
 │   ├── rest/
 │   ├── soap/
-│   └── graphql/
+│   ├── graphql/
+│   ├── test_cvss.py
+│   ├── test_jwt.py
+│   └── test_xxe.py
 │
-├── .github/workflows/  ← CI/CD pipeline
-│   └── aegis_scan.yml
+├── .github/
+│   └── workflows/
+│       └── aegis_scan.yml
 │
-├── main.py             ← Entry point and protocol router
+├── main.py
+├── fake_soap_server.py
+├── SOAP_enum_test.py
+├── wsdl_tester.py
+├── audit_log.csv
+├── crapi_openapi.json
+├── crapi_openapi.yml
+├── pytest.ini
 ├── requirements.txt
-├── .gitignore
-├── LICENSE
+├── LICENSE.txt
 └── README.md
 ```
 
